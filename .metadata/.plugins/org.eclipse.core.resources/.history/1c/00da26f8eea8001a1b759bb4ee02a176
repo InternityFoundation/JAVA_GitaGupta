@@ -1,0 +1,28 @@
+package com.predefinedFunctionalInterface;
+import java.util.function.*;
+
+class Person
+{
+	private String name;
+	
+	public void setName(String name)
+	{
+		this.name=name;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+}
+
+public class Consumer {	
+	public static void main(String... p)
+	{
+		Person p=new Person();
+	Consumer<Person> nameInfo=s->s.setName("java");
+	c.accept(p);
+	System.out.println(p.getName());
+			
+	}
+}

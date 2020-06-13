@@ -1,0 +1,16 @@
+package com.lambda;
+
+@FunctionalInterface
+interface FI
+{
+	void facebook();
+}
+
+public class DemoFunctionInterface {
+	public static void main(String... args)
+	{
+		FI fd= () -> System.out.println("java8 feature");
+		fd.facebook();
+	}
+
+}

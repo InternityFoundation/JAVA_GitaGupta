@@ -1,0 +1,19 @@
+package com.method;
+
+interface DM
+{
+	default void show()
+	{
+		System.out.println("default method works in interface");
+	}
+}
+
+public class DefaultMethod  implements DM
+{
+	public static void main(String... d)
+	{
+		DM obj=new DefaultMethod();
+		obj.show();
+	}
+
+}

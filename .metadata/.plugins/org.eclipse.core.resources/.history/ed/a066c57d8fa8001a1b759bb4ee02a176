@@ -1,0 +1,19 @@
+package com.lambdaExpression;
+
+public class LambdaExpression
+{
+//	public static int square(int n)
+//	{
+////		return n*n;
+//	}
+	(n)->{
+		return n*n;
+	}
+	
+	public static void main (String... lambda)
+	{
+		System.out.println("SQUARE="+square(6));
+	}
+	
+}
+

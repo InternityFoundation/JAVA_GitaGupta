@@ -1,0 +1,51 @@
+package com.basepackage.dao;
+import java.util.List;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import com.basepackage.bean.Csv;
+import com.basepackage.utility.DbConnection;
+
+
+
+public class InsertDatabaseImpl implements InsertDatabase  {
+	public void insertValue(List<Csv> csvList){ 
+		try
+		{
+	        Connection con=new DbConnection().buildConnection();
+	        String sql = "insert  into employeedetails(EmployeeId, EmployeeName,Job_Status,DeptId,DeptName,Salary,JobLocation) "+" values(?,?,?,?,?,?,?)";
+	        PreparedStatement stmt = con.prepareStatement(sql);
+			// data store		
+			
+			for(Csv element: csvList) {	
+				//insert
+				stmt.setInt(1, element.getEmployeeId());
+				stmt.setString(2, element.getEmployeeName());
+				stmt.setString(3, element.getJob_Status());
+				stmt.setInt(4, element.getDeptId());
+				stmt.setString(5, element.getDeptName());
+				stmt.setDouble(6, element.getSalary());
+				stmt.setString(7, element.getJobLocation());
+				stmt.executeUpdate();				
+			}
+			System.out.println("data inserted");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+    } 
+	public void fetchValue()
+	{
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+} 
+

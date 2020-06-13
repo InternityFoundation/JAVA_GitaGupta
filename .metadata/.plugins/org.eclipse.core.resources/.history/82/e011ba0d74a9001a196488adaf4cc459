@@ -1,0 +1,28 @@
+package com.predefinedFunctionalInterface;
+import java.util.function.Consumer;
+
+class Person
+{
+	private String name;
+	
+	public void setName(String name)
+	{
+		this.name=name;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+}
+
+public class ConsumerLogic {	
+	public static void main(String... pn)
+	{
+		Person p=new Person();
+	Consumer<Person> nameInfo=s->s.setName("java");
+	nameInfo.accept(p);
+	System.out.println(p.getName());
+			
+	}
+}

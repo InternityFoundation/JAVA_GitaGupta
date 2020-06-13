@@ -1,0 +1,13 @@
+package com.predefinedFunctionalInterface;
+
+import java.util.function.*;
+
+public class FunctionLogic {
+	public static void main(String... pn)
+	{
+		BiFunction<Integer,Integer,Integer> logic=(a,b)->(a+b);
+	System.out.println(logic.apply(2,4));
+			
+	}
+
+}

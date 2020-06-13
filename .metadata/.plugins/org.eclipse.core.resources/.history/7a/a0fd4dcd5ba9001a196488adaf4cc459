@@ -1,0 +1,16 @@
+package com.lambda;
+
+@FunctionalInterface
+interface FI
+{
+	void facebook(String s);
+}
+
+public class DemoFunctionInterface {
+	public static void main(String... args)
+	{
+		FI fd= (s) -> System.out.println(s);
+		fd.facebook("friend request");
+	}
+
+}

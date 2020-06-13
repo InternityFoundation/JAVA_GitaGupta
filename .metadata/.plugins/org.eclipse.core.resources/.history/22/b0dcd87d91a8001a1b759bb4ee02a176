@@ -1,0 +1,13 @@
+package com.datetimeAPI;
+
+import java.time.LocalDate;
+
+public class DT_API 
+{
+	public static void main(String... s)
+	{
+		LocalDate d=LocalDate.now();
+		System.out.println(d);
+	}
+
+}

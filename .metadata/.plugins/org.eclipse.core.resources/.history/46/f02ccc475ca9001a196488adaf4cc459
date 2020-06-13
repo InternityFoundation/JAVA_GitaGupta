@@ -1,0 +1,10 @@
+package com.lambdaExpression;
+
+interface lamdainterface
+{
+	void 
+}
+
+public class ImplementLambda {
+
+}

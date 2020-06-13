@@ -1,0 +1,37 @@
+package com.lambda;
+
+interface Phone
+{
+	void call();
+	//void mycall();
+	static void videos()
+	{
+		System.out.println("its static in interface");
+	}
+	
+	default void message()
+	{
+		System.out.println("its default");
+	}
+	
+}
+class Android implements Phone
+{
+	public void call()
+	{
+		System.out.println("calling");
+	}
+}
+
+public class DemoInterface {
+		public static void main(String args[])
+		{
+			Phone.videos();		
+			Phone p=new Android();
+			p.call();
+			p.message();
+			
+			Android a=new Android();
+			a.call();
+		}
+}
